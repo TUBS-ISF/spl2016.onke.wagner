@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="Design Pattern Learner">
+				<description>
+					A simple program that let you learn design patterns
+				</description>
+				<alt abstract="true" mandatory="true" name="UI">
+					<description>
+						Let you pick your preferd user interface
+					</description>
+					<feature mandatory="true" name="Gui">
+						<description>
+							Graphical User Interface, can display class diagrams
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Command Line">
+						<description>
+							Simple command line interface
+						</description>
+					</feature>
+				</alt>
+				<and abstract="true" mandatory="true" name="Backend">
+					<description>
+						Where the information about the design patterns come from
+					</description>
+					<or abstract="true" mandatory="true" name="Data Source">
+						<description>
+							Format where the information comes from
+							
+						</description>
+						<feature mandatory="true" name="Csv">
+							<description>
+								CSV Format
+								
+							</description>
+						</feature>
+						<feature mandatory="true" name="Database">
+							<description>
+								The information are read from a database (e.g., oracle, ...)
+							</description>
+						</feature>
+						<feature mandatory="true" name="Txt">
+							<description>
+								Simple text file
+							</description>
+						</feature>
+					</or>
+				</and>
+				<and abstract="true" mandatory="true" name="Design Pattern Information">
+					<description>
+						The main information about design patterns
+					</description>
+					<feature mandatory="true" name="Type">
+						<description>
+							The type of the design pattern (e.g., creational patterns, structural patterns, ... )
+						</description>
+					</feature>
+					<feature name="Class Diagram">
+						<description>
+							If chosen, the class diagram of the design pattern should be displays. Only makes sense when Gui is chosen
+						</description>
+					</feature>
+					<feature mandatory="true" name="Description">
+						<description>
+							The textual description of how the design pattern works
+						</description>
+					</feature>
+					<feature name="Example">
+						<description>
+							Example implementation of the design pattern
+						</description>
+					</feature>
+					<feature name="See also">
+						<description>
+							Design patterns that are highly related (if Gui is chosen, this could be something with links to the related pattern)
+						</description>
+					</feature>
+					<feature name="List All Patterns">
+						<description>
+							If command line is chosen, a feature where the user can see the names of all available patterns should be implemented
+						</description>
+					</feature>
+				</and>
+				<and abstract="true" name="Trainer">
+					<description>
+						Simple trainer to improve your skills on design patterns
+					</description>
+					<and name="Score">
+						<description>
+							If chosen, a score for the current session will be saved
+						</description>
+						<feature name="Share Score">
+							<description>
+								The user can share his score on facebook, googleplus, mail etc
+							</description>
+						</feature>
+					</and>
+					<alt abstract="true" mandatory="true" name="Query User">
+						<description>
+							How the program expects the answer input from a user
+						</description>
+						<feature mandatory="true" name="Complete  Sentences">
+							<description>
+								If chosen, the user has to learn the information word for word
+							</description>
+						</feature>
+						<feature mandatory="true" name="Headwords">
+							<description>
+								If chosen, the user has not to type the information word for word but there should be some overlap with the information about the current pattern
+							</description>
+						</feature>
+					</alt>
+				</and>
+			</and>
+		</struct>
+		<constraints>
+			<rule>
+				<imp>
+					<var>Class Diagram</var>
+					<var>Gui</var>
+				</imp>
+			</rule>
+			<rule>
+				<imp>
+					<var>List All Patterns</var>
+					<var>Command Line</var>
+				</imp>
+			</rule>
+		</constraints>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
