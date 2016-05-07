@@ -1,0 +1,9 @@
+abstract factory pattern,Creational Design Pattern
+singleton pattern,Creational Design Pattern
+builder pattern,Creational Design Pattern
+adapter pattern,Structural Design Pattern
+bridge pattern,Structural Design Pattern
+decorator pattern,Structural Design Pattern
+observer pattern,Behavioral Design Pattern
+visitor pattern,Behavioral Design Pattern
+command pattern,Behavioral Design Pattern

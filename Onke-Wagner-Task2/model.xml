@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+	<featureModel>
+		<properties/>
+		<struct>
+			<and abstract="true" mandatory="true" name="DesignPatternLearner">
+				<description>
+					
+				</description>
+				<alt abstract="true" mandatory="true" name="UI">
+					<description>
+						
+					</description>
+					<feature abstract="true" mandatory="true" name="GUI">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="CommandLine">
+						<description>
+							
+						</description>
+					</feature>
+				</alt>
+				<and abstract="true" mandatory="true" name="Backend">
+					<description>
+						
+					</description>
+					<or abstract="true" mandatory="true" name="DataSource">
+						<description>
+							
+						</description>
+						<feature mandatory="true" name="CSV">
+							<description>
+								
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="Database">
+							<description>
+								
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="Txt">
+							<description>
+								
+							</description>
+						</feature>
+					</or>
+				</and>
+				<and abstract="true" mandatory="true" name="DesignPatternInformation">
+					<description>
+						
+					</description>
+					<feature mandatory="true" name="Name">
+						<description>
+							
+						</description>
+					</feature>
+					<feature mandatory="true" name="Type">
+						<description>
+							
+						</description>
+					</feature>
+					<feature abstract="true" name="ClassDiagram">
+						<description>
+							
+						</description>
+					</feature>
+					<feature abstract="true" mandatory="true" name="Description">
+						<description>
+							
+						</description>
+					</feature>
+					<feature abstract="true" name="Example">
+						<description>
+							
+						</description>
+					</feature>
+					<feature abstract="true" name="SeeAlso">
+						<description>
+							
+						</description>
+					</feature>
+					<feature name="ListAllPatterns">
+						<description>
+							
+						</description>
+					</feature>
+				</and>
+				<and abstract="true" name="Trainer">
+					<description>
+						
+					</description>
+					<and abstract="true" name="Score">
+						<description>
+							
+						</description>
+						<feature abstract="true" name="ShareScore">
+							<description>
+								
+							</description>
+						</feature>
+					</and>
+					<alt abstract="true" mandatory="true" name="QueryUser">
+						<description>
+							
+						</description>
+						<feature abstract="true" mandatory="true" name="Headword">
+							<description>
+								
+							</description>
+						</feature>
+						<feature abstract="true" mandatory="true" name="CompleteSentences">
+							<description>
+								
+							</description>
+						</feature>
+					</alt>
+				</and>
+			</and>
+		</struct>
+		<constraints/>
+		<calculations Auto="true" Constraints="true" Features="true" Redundant="true" Tautology="true"/>
+		<comments/>
+		<featureOrder userDefined="false"/>
+	</featureModel>
